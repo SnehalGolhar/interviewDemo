@@ -89,7 +89,7 @@ class App extends Component {
     let errorInfo = "";
     if (this.state.isError) {
       errorInfo = (
-        <small id="errorText" class="form-text text-danger">
+        <small id="errorText" className="form-text text-danger">
           {"we can not parse course"}
         </small>
       );
@@ -97,24 +97,23 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div class="input-group">
-          {" "}
+        <div className="input-group">
           <label>Course Name</label>
         </div>
-        <div class="input-group">
+        <div className="input-group">
           <input
             ref="myInput"
             type="text"
-            class="form-control"
+            className="form-control"
             placeholder="Enter Course name"
             className={this.state.isError ? "course-input" : ""}
             onChange={this.handleChange}
           />
 
-          <span class="form-group-btn" styles="width:0;">
+          <span className="form-group-btn" styles="width:0;">
             <button
               type="button"
-              class={
+              className={
                 this.state.isError
                   ? "btn btn-outline-danger"
                   : "btn btn-outline-primary"
@@ -125,7 +124,7 @@ class App extends Component {
               Submit
             </button>
           </span>
-          <div class="input-group">{errorInfo}</div>
+          <div className="input-group">{errorInfo}</div>
 
           <div
             className="courseInfo"
